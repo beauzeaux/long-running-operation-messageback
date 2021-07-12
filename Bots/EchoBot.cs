@@ -56,12 +56,6 @@ namespace Microsoft.BotBuilderSamples.Bots
 
                 await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
             }
-           
-            // await Task.Delay(5000);
-            // var updatedActivity = MessageFactory.Text($"Echo (updated): {string.Concat(turnContext.Activity.Text.Split().Reverse())}");
-            // // Make sure to modify the existing activity by setting the id
-            // updatedActivity.Id = activity.Id;
-            // await turnContext.UpdateActivityAsync(updatedActivity, cancellationToken);
         }
 
         protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
