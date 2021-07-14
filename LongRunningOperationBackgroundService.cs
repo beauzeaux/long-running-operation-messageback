@@ -17,7 +17,6 @@ namespace Microsoft.BotBuilderSamples
         private readonly ILogger<LongRunningOperationService> logger;
         private readonly BotAdapter botAdapter;
         private readonly ConcurrentDictionary<string, Task> operations = new ConcurrentDictionary<string, Task>();
-        // Don't do this in production applications, this is just for demonstration purposes
         private readonly string botId;
 
         public LongRunningOperationService(IConfiguration configuration, ILogger<LongRunningOperationService> logger, BotAdapter botAdapter) {
